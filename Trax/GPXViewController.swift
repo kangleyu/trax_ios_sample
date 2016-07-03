@@ -66,6 +66,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         if control == view.leftCalloutAccessoryView {
             performSegueWithIdentifier(Constants.ShowImageSegue, sender: view)
         } else if control == view.rightCalloutAccessoryView {
+            mapView.deselectAnnotation(view.annotation, animated: true)
             performSegueWithIdentifier(Constants.EditUserWaypoint, sender: view)
         }
     }

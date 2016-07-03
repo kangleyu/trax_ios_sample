@@ -67,7 +67,7 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate {
             queue: queue) {
                 notification in
                 if let waypoint = self.waypointToEdit {
-                    waypoint.name = self.infoTextField.text
+                    waypoint.info = self.infoTextField.text
                 }
         }
     }
