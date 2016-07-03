@@ -22,6 +22,11 @@ class EditWaypointViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func done(sender: UIBarButtonItem) {
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     var waypointToEdit: EditableWaypoint? {
         didSet {
             updateUI()
