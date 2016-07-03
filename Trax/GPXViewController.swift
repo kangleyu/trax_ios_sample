@@ -89,6 +89,17 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx")
     }
+    
+    
+    @IBAction func addWaypoint(sender: UILongPressGestureRecognizer) {
+        if sender.state == .Began {
+            let coordinate = mapView.convertPoint(sender.locationInView(mapView), toCoordinateFromView: mapView)
+            let waypoint = GPX.Waypoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            waypoint.name = "Dropped"
+            mapView.addAnnotation(waypoint)
+            
+        }
+    }
 
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
