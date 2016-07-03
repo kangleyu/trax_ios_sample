@@ -114,12 +114,23 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         }
     }
     
-    func adaptivePresentationStyleForPresentationController(
+//    func adaptivePresentationStyleForPresentationController(
+//        controller: UIPresentationController,
+//        traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+//        return .None
+//    }
+    
+    func presentationController(
         controller: UIPresentationController,
-        traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-        return .None
+        viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        if style == .FullScreen {
+            let navcon = UINavigationController(rootViewController: controller.presentedViewController)
+            return navcon
+        } else {
+            return nil
+        }
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gpxURL = NSURL(string: "http://cs193p.stanford.edu/Vacation.gpx")
