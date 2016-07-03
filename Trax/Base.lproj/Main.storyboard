@@ -38,7 +38,7 @@
                     <connections>
                         <outlet property="mapView" destination="NO4-8s-ao1" id="h8Q-dM-xd1"/>
                         <segue destination="nDF-PC-xXx" kind="presentation" identifier="Show Image" id="SdW-WB-TS5"/>
-                        <segue destination="krl-WA-1qJ" kind="presentation" identifier="Edit Waypoint" id="A8n-Tz-znz"/>
+                        <segue destination="krl-WA-1qJ" kind="presentation" identifier="Edit Waypoint" modalPresentationStyle="formSheet" id="A8n-Tz-znz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
