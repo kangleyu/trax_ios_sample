@@ -17,6 +17,7 @@
 		AFF037441D29076C0044CC99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF037431D29076C0044CC99 /* Constants.swift */; };
 		AFF037461D2925F10044CC99 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF037451D2925F10044CC99 /* ImageViewController.swift */; };
 		AFF037481D2927180044CC99 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF037471D2927180044CC99 /* UIViewControllerExtensions.swift */; };
+		AFF0374A1D2931920044CC99 /* EditWaypointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF037491D2931920044CC99 /* EditWaypointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AFF037431D29076C0044CC99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AFF037451D2925F10044CC99 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		AFF037471D2927180044CC99 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		AFF037491D2931920044CC99 /* EditWaypointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditWaypointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				AFF037471D2927180044CC99 /* UIViewControllerExtensions.swift */,
 				AFF037431D29076C0044CC99 /* Constants.swift */,
 				AFF037301D2903A80044CC99 /* Main.storyboard */,
+				AFF037491D2931920044CC99 /* EditWaypointViewController.swift */,
 				AFF0373F1D2904690044CC99 /* GPX.swift */,
 				AFF037451D2925F10044CC99 /* ImageViewController.swift */,
 				AFF0373E1D2903CE0044CC99 /* Supporting Files */,
@@ -165,6 +168,7 @@
 				AFF0372D1D2903A80044CC99 /* AppDelegate.swift in Sources */,
 				AFF037461D2925F10044CC99 /* ImageViewController.swift in Sources */,
 				AFF037401D2904690044CC99 /* GPX.swift in Sources */,
+				AFF0374A1D2931920044CC99 /* EditWaypointViewController.swift in Sources */,
 				AFF037481D2927180044CC99 /* UIViewControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

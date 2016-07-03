@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Trax-->
@@ -37,6 +38,7 @@
                     <connections>
                         <outlet property="mapView" destination="NO4-8s-ao1" id="h8Q-dM-xd1"/>
                         <segue destination="nDF-PC-xXx" kind="presentation" identifier="Show Image" id="SdW-WB-TS5"/>
+                        <segue destination="6oX-c1-ntO" kind="presentation" identifier="Edit Waypoint" id="A8n-Tz-znz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -47,6 +49,76 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1180" y="346"/>
+        </scene>
+        <!--Edit Waypoint View Controller-->
+        <scene sceneID="roM-Gk-NPR">
+            <objects>
+                <viewController id="6oX-c1-ntO" customClass="EditWaypointViewController" customModule="Trax" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uuE-DV-NIo"/>
+                        <viewControllerLayoutGuide type="bottom" id="WyJ-yK-9q9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3SV-XT-r6h">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MaK-Ye-nwl">
+                                <rect key="frame" x="20" y="20" width="560" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LQi-T0-qv0">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOh-wq-OlI">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="88" id="Ulf-Je-EUd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Yp-aO-TdS">
+                                                <rect key="frame" x="96" y="0.0" width="464" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xvc-dc-S27">
+                                        <rect key="frame" x="0.0" y="38" width="560" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kn-UJ-6J2">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pP8-VB-Voi">
+                                                <rect key="frame" x="96" y="0.0" width="464" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WyJ-yK-9q9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MaK-Ye-nwl" secondAttribute="bottom" constant="8" symbolic="YES" id="5yD-Vv-6L8"/>
+                            <constraint firstItem="MaK-Ye-nwl" firstAttribute="trailing" secondItem="3SV-XT-r6h" secondAttribute="trailingMargin" id="it7-qL-MT3"/>
+                            <constraint firstItem="MaK-Ye-nwl" firstAttribute="top" secondItem="uuE-DV-NIo" secondAttribute="bottom" id="uUn-zE-TZY"/>
+                            <constraint firstItem="MaK-Ye-nwl" firstAttribute="leading" secondItem="3SV-XT-r6h" secondAttribute="leadingMargin" id="z5N-iF-4hD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoTextField" destination="pP8-VB-Voi" id="ZwO-Kb-2iF"/>
+                        <outlet property="nameTextField" destination="0Yp-aO-TdS" id="c77-LT-I7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksO-oK-cCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="-320"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="8tc-C6-2a5">
