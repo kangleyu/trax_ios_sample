@@ -105,8 +105,11 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
         } else if segue.identifier == Constants.EditUserWaypoint {
             if let editableWaypoint = waypoint as? EditableWaypoint,
                 let ewvc = destination as? EditWaypointViewController {
-                    ewvc.waypointToEdit = editableWaypoint
+                if let ppc = ewvc.popoverPresentationController {
+                    ppc.sourceRect = annotationView!.frame
                 }
+                ewvc.waypointToEdit = editableWaypoint
+            }
         }
     }
         

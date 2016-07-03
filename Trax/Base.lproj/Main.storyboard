@@ -38,7 +38,9 @@
                     <connections>
                         <outlet property="mapView" destination="NO4-8s-ao1" id="h8Q-dM-xd1"/>
                         <segue destination="nDF-PC-xXx" kind="presentation" identifier="Show Image" id="SdW-WB-TS5"/>
-                        <segue destination="krl-WA-1qJ" kind="presentation" identifier="Edit Waypoint" modalPresentationStyle="formSheet" id="A8n-Tz-znz"/>
+                        <segue destination="6oX-c1-ntO" kind="popoverPresentation" identifier="Edit Waypoint" popoverAnchorView="NO4-8s-ao1" id="tTm-qU-3og">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,7 +128,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksO-oK-cCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Dbz-O4-8Su" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2715" y="-320"/>
+            <point key="canvasLocation" x="1903" y="-385"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="8tc-C6-2a5">
@@ -185,24 +187,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYO-YX-dIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="368" y="346"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="00s-a0-BDz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="krl-WA-1qJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5jW-G1-Csh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6oX-c1-ntO" kind="relationship" relationship="rootViewController" id="yL2-E7-9wl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pdv-HX-fjj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1903" y="-320"/>
         </scene>
     </scenes>
 </document>
