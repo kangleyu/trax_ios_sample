@@ -114,17 +114,21 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
         }
     }
     
-//    func adaptivePresentationStyleForPresentationController(
-//        controller: UIPresentationController,
-//        traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-//        return .None
-//    }
+    func adaptivePresentationStyleForPresentationController(
+        controller: UIPresentationController,
+        traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return traitCollection.horizontalSizeClass == .Compact ? .OverFullScreen : .None
+    }
     
     func presentationController(
         controller: UIPresentationController,
         viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
-        if style == .FullScreen {
+        if style == .FullScreen || style == .OverFullScreen {
             let navcon = UINavigationController(rootViewController: controller.presentedViewController)
+            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight))
+            visualEffectView.frame = navcon.view.bounds
+            visualEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+            navcon.view.insertSubview(visualEffectView, atIndex: 0)
             return navcon
         } else {
             return nil
