@@ -113,6 +113,12 @@ class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentat
             }
         }
     }
+    
+    func adaptivePresentationStyleForPresentationController(
+        controller: UIPresentationController,
+        traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .None
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
