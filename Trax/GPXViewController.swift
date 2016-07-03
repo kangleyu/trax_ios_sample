@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class GPXViewController: UIViewController, MKMapViewDelegate {
+class GPXViewController: UIViewController, MKMapViewDelegate, UIPopoverPresentationControllerDelegate {
     
     var gpxURL: NSURL? {
         didSet {
@@ -107,6 +107,7 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
                 let ewvc = destination as? EditWaypointViewController {
                 if let ppc = ewvc.popoverPresentationController {
                     ppc.sourceRect = annotationView!.frame
+                    ppc.delegate = self
                 }
                 ewvc.waypointToEdit = editableWaypoint
             }
@@ -134,6 +135,10 @@ class GPXViewController: UIViewController, MKMapViewDelegate {
             mapView.mapType = .Satellite
             mapView.delegate = self
         }
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+        selectWaypoint((popoverPresentationController.presentedViewController as? EditWaypointViewController)?.waypointToEdit)
     }
 
 }
